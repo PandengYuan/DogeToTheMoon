@@ -1,0 +1,57 @@
+{% extends 'rango/userbase.html' %}
+{% load rango_template_tags %}
+{% load staticfiles %}
+
+{% block title_block %}
+    {% if category %}
+        {{ category.name }}
+    {% else %}
+        Unknown Category
+    {% endif %}
+{% endblock %}
+
+
+{% block userbase_body_block %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/category.css' %}" type="text/css" media ='all'>
+    {% if category %}
+        {% if products %}
+        <ul class = "list1">
+            {% for product in products %}
+            <li >
+                <a href="{% url 'rango:show_product' product.slug %}"> <img src="{{ MEDIA_URL }}{{ product.picture}}" alt="Picture of Product" class = 'proimg'/> </a><br/>
+                <a href="{% url 'rango:show_product' product.slug %}" class='name'>{{ product.name }}</a><br/>
+                <a href="{% url 'rango:show_product' product.slug %}" class="description">{{ product.description }}</a><br/>
+                <a class='price'>£：{{ product.price }}</a>
+                <hr/>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <strong>No product currently in category.</strong>
+        {% endif %}
+    {% else %}
+        The specified category does not exist.
+    {% endif %}
+   
+    <div class='navigation'>
+        {% if categories %}
+            {% for c in categories %}
+                {% if c == category %}
+                    <li class = 'list'>
+                        <strong>
+                                <a href="{% url 'rango:show_category' c.slug %}" >{{ c.name }}</a>
+                        </strong>
+                    </li>
+                {% else %}
+                    <li class = 'list'>
+                        <a href="{% url 'rango:show_category' c.slug %}" >{{ c.name }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <li class = 'list'><strong>There are no categories present.</strong></li>
+        {% endif %}
+    </div> 
+
+{% endblock %}

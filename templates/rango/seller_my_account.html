@@ -1,0 +1,37 @@
+{% extends 'rango/seller_base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    My Account
+{% endblock %}
+
+{% block seller_base_body_block %}
+    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/account.css' %}" type="text/css" media ='all'>
+ 
+    <div class="userprofile">
+        <img src="{{ MEDIA_URL }}{{user.userprofile.picture}}" alt="Picture of Seller" class="uimg"/>
+    </div>
+
+    <div class="br1">
+        <a></a>
+    </div>
+
+    <div class="userin">
+        <ul class="uea">
+            <li><a>Username:  {{user.username}}</a></li>
+            <li><a>Email:  {{user.email}}</a></li>
+            <li><a>Address:  {{user.userprofile.address}}</a></li>
+            </ul>
+    </div>
+
+    <div class="br2">
+        <a></a>
+    </div>
+
+    <div class="utype">
+        User Type:  {{user.userprofile.usertype}}
+    </div>
+  
+{% endblock %}

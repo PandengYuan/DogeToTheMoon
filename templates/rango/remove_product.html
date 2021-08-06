@@ -1,0 +1,50 @@
+{% extends 'rango/seller_base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Remove Product
+{% endblock %}
+
+{% block seller_base_body_block %}
+
+    
+
+    <script type='text/javascript' src="{% static 'js/remove.js' %}"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/remove_product.css' %}" type="text/css" media ='all'>
+    
+   <div class="products">
+       <!-- <ul class="plist"> -->
+        {% for p in products %}
+        <div class="ps">
+            <div class="box"><input type="checkbox"  checkbox="checkbox" name="item" id="check"/></div>
+            <div class="p"><a href="{% url 'rango:show_product' p.slug %}" > <img src="{{ MEDIA_URL }}{{ p.picture}}" alt="Picture of Product" class="p_pic"/>  </a></div> 
+            
+            <div class="des"><a href="{% url 'rango:show_product' p.slug %}" id="p_name">{{ p.name }}</a><br/>
+                <a href="{% url 'rango:show_product' p.slug %}" id="p_descrip">{{ p.description }}</a><br/>
+                <span id="price">Price : ￡ {{p.price}}</span><br/></div>
+
+                
+            </div>
+            <hr />
+        
+        </div>
+
+        {% endfor %}
+    <!-- </ul> -->
+
+        <div class="s">
+            <input type="submit" value="Confirm and Remove" id="sub" onclick="remove()"/>
+        </div>
+
+   </div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

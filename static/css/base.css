@@ -1,0 +1,160 @@
+body {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    margin:0;
+	padding:0;
+
+}
+
+#header{
+    position:absolute;
+    display: flex;
+    background-color:#9e8d73;
+    width:1460px;
+    padding:0%,0%,80%,0%;
+    margin-top:0%;
+    margin-left:0%;  
+    z-index:99;  
+}
+
+.logo{
+    width:65px;
+    height:65px;
+    margin: 8px;
+}
+
+.title{
+    position:absolute;
+    left:120px;
+    top:30px;
+    color:#f0d9b6;
+    font-size:16px;
+    font-weight: bold;
+}
+
+.homepage{
+    position:absolute;
+    left:320px ;
+    top:20px;
+}
+
+.home{
+    position:relative;
+    font-size:16px;
+    bottom:10px;
+    color:black;
+    font-weight: bold;
+}
+
+/* .search{
+    position:fixed;
+    top:-10px;
+    left:110px;
+    }
+    
+.searchinput{
+    position:fixed;
+    top:40px;
+    left:500px;
+    width:400px;
+    height:30px;
+    border-radius:12px;
+    border:1px;
+} */
+.searchbutton{
+    position:fixed;
+    left:920px;
+    font-size:16px;
+    color:white;
+    top:45px;
+    
+}
+    
+.button_login {
+    
+    background-color: #c1ac59; 
+  
+    padding: 13px 40px;
+    text-align: center;
+    display: inline-block;
+   
+    border-radius: 25px;
+    border: 1px solid black;
+  
+  
+    margin-left:970px;
+    margin-top:20px;
+}
+
+.button_login a{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.button_reg {
+    background-color: #c1ac59; 
+  
+    padding: 13px 40px;
+    text-align: center;
+    display: inline-block;
+   
+    border-radius: 25px;
+    border: 1px solid black;
+  
+    /* padding-left:25px; */
+    margin-left:20px;
+    margin-top:20px;
+}
+.button_reg a{
+    font-size: 16px;
+    font-weight: bold;
+    
+    text-decoration: none;
+}
+
+.logout{
+    background-color: #c1ac59; 
+  
+    padding: 13px 40px;
+    text-align: center;
+    display: inline-block;
+   
+    border-radius: 25px;
+    border: 1px solid black;
+  
+    margin-left:1100px;
+    margin-top:20px;
+}
+
+.logout a{
+    font-size: 16px;
+    font-weight: bold;
+    
+    text-decoration: none;
+}
+a:link,a:visited{
+    color:black;
+}
+img {
+    width: 40px;
+    height:40px;
+    margin-right:20px;
+
+}
+.cart{
+    position:relative;
+    top:15px;
+    right:200px;
+   
+}
+.account{
+    position:relative;
+    top:15px;
+    right:50px;
+}
+.account2{
+    position:relative;
+    top:15px;
+    right:-5px;
+}

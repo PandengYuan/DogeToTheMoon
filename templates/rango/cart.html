@@ -1,0 +1,53 @@
+{% extends 'rango/buyer_base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Cart
+{% endblock %}
+
+
+<!-- this templet is used to show the cart page of 'buyer' user  -->
+
+{% block buyer_base_body_block %}
+
+<script type='text/javascript' src="{% static 'js/cart.js' %}"></script>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{% static 'css/cart.css' %}" type="text/css" media ='all'>
+
+    <div>
+
+        {% if products %}
+
+            
+            <div class="carts">
+                {% for p in products %}
+                <div class="cart">
+                          
+                    <div class="c"><a href="{% url 'rango:show_product' p.slug %}"> <img src="{{ MEDIA_URL }}{{ p.picture}}" alt="Picture of Product" class="c_pic"/>  </a></div>
+                    
+                    <div class="c_des"><a href="{% url 'rango:show_product' p.slug %}" id="c_name">Name : {{ p.name }}</a><br/>
+                    <a href="{% url 'rango:show_product' p.slug %}" id="c_descrip">Description : {{ p.description }}</a><br/>
+                    <span id="c_price" name = "price">{{p.price}}</span><br/>
+                    </div>
+
+                    <div class="c_box" ><input type="checkbox"  checkbox="checkbox" id="c_check"  name="product_item" onclick="calculate_price(this)"/></div>
+                    </div>
+
+                {% endfor %}
+            
+            </div>
+            
+        {% else %}
+
+            <span>There is no product in your cart.</span>
+
+        {% endif %}
+            <div class="total"><span >Total : ￡</span>
+                               <span id='total_price'>1143.85</span>
+            
+            <a href="{% url 'rango:payment' %}"><input type="submit" value="Check Out" id="c_sub"/></div></a>
+        
+        
+    </div>
+
+{% endblock %}

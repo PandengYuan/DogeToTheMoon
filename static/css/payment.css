@@ -1,0 +1,117 @@
+.userdetail{
+    position:absolute;
+    top:5px;
+    left:50px;
+}
+.user1{
+    position:absolute;
+    top:130px;
+    left:670px;
+    margin: 0;
+    padding: 0;
+    width: 332px;
+    /* position: fixed; */
+    font-size:20px;
+    color: #000;
+    font-weight: bold;
+    font-style:oblique;
+}
+.user1 li{
+    display: inline-block;
+    text-align:center;
+    line-height: 35px;
+    list-style: none;
+    justify-content: center;
+    margin-bottom:15px;
+    width:332px;
+}
+
+.bar{
+    background-color: rgb(153,135,108,0.7);
+    position:absolute;
+    top:320px;
+    left:330px;
+    width:1130px;
+    height:50px;
+}
+
+.bar a{
+    color:#99876c;
+    width:800px;
+    height:50px;
+}
+
+.card{
+    position:absolute;
+    top:10px;
+    left:50px;
+
+}
+
+.card1{
+    position:absolute;
+    top:430px;
+    left:670px;
+    margin: 0;
+    padding: 0;
+    width: 392px;
+    /* position: fixed; */
+    font-size:20px;
+    color: #000;
+    font-weight: bold;
+    font-style:oblique;
+}
+.card1 li{
+    display: inline-block;
+    line-height: 35px;
+    list-style: none;
+    justify-content: center;
+    margin-bottom:15px;
+}
+
+.card1 li input{
+    /* position:relative; */
+    border:1px solid black;
+    border-radius:12px;
+    color:black;
+    height: 30px;
+    /* left: 26px; */
+   
+}
+
+.cvv{
+    position:relative;
+
+    left: 120px;
+}
+.cn{
+    position:relative;
+    left: 25px;
+}
+.pn{
+    position:relative;
+    left: 10px;
+}
+
+.csub{
+    /* position:fixed; */
+    position:absolute;
+    left: 820px;
+    top:620px;
+    width:110px;
+    height:40px;
+    font-size: 20px;
+    background-color:#c1ac59 ;
+    
+    border:1px solid black;
+    border-radius:20px;
+}
+
+.csub a{
+    position:relative;
+    left: 20px;
+    top:5px;
+    text-decoration: none;
+    font-weight: bold;
+    color:rgb(63, 62, 62);
+}

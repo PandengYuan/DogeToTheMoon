@@ -1,0 +1,11 @@
+
+.search_content{
+    position:absolute;
+    top:25px;
+    left:550px;
+    width:400px;
+    height:30px;
+    border-radius:12px;
+    border:1px solid black;
+    z-index:999;  
+} 

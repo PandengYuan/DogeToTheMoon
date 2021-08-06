@@ -1,0 +1,31 @@
+{% extends 'rango/buyer_base.html' %}
+{% load staticfiles %}
+{% block title_block %}
+    Payment
+{% endblock %}
+
+{% block buyer_base_body_block %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/payment.css' %}" type="text/css" media ='all'>
+    <div class = 'userdetail'>
+       <ul class= 'user1'>
+            <li>User Name : {{user.username}}</li>
+            <li>Email : {{user.email}}</li>
+            <li>Address : {{user.userprofile.address}}</li>
+            <li>Price : ￡ 200</li>
+        </ul>
+    </div>
+    <div class="bar">
+        <a></a>
+    </div>
+    <div class = 'card'>
+        <ul class = 'card1'>
+            <li>Card Number : <input type="text" class="cn"/></li>
+            <li>CVV : <input type="text"  class="cvv"/></li>
+            <li>Phone Number : <input type="text" class="pn" /></li>
+            
+        </ul>
+    </div>
+    <div class='csub'><a href="{% url 'rango:index' %}" >Submit</a></div>
+    
+{% endblock %}

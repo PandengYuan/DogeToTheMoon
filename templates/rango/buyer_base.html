@@ -1,0 +1,29 @@
+{% extends 'rango/userbase.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+{% endblock %}
+
+<!-- this page is a also a base template    -->
+
+<!-- base
+            userbase
+                    buyerbase -->
+
+{% block userbase_body_block %}
+
+    {% block buyer_base_body_block %}
+    {% endblock %}
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/buyer_base.css' %}" type="text/css" media ='all'>
+    <body>
+    <div id="nav">
+        <ul>
+            <li><a href="{% url 'rango:buyer_my_account' %}" >My Account</a></li>
+            <li><a href="{% url 'rango:cart' %}">Cart</a></li>
+            <li><a href="{% url 'rango:payment' %}" >payment</a></li>
+        </ul>
+    </div>
+    </body>    
+{% endblock %}

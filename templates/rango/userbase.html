@@ -1,0 +1,21 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+{% endblock %}
+
+{% block body_block %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/userbase.css' %}" type="text/css" media ='all'>
+    <div >
+        <form id="search_form" method="post" action="{% url 'rango:product_search' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="content" value="" size="50" class="search_content"/>
+           
+        </form>
+    </div>
+
+    {% block userbase_body_block %}
+    {% endblock %}
+   
+{% endblock %}
