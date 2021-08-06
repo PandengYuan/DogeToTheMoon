@@ -29,7 +29,7 @@ def show_category(request, category_name_slug):
 
     context_dict = {}
     #context
-    category_list = Category.objects
+    category_list = Category.objects.all()
 
     try:#slug problem
         category = Category.objects.get(slug=category_name_slug)
